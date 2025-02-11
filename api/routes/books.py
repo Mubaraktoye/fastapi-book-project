@@ -61,7 +61,7 @@ async def delete_book(book_id: int) -> None:
     db.delete_book(book_id)
     return JSONResponse(status_code=status.HTTP_204_NO_CONTENT, content=None)
 
-@router.get("/api/v1/books/{book_id}", response_model=Book, status_code=status.HTTP_200_OK)
+@router.get("/{book_id}", response_model=Book, status_code=status.HTTP_200_OK)
 async def get_book(book_id: int):
     book = db.books.get(book_id)
     if not book:
