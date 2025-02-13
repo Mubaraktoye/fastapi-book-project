@@ -30,13 +30,6 @@ db.books = {
         publication_year=1955,
         genre=Genre.FANTASY,
     ),
-     4: Book(
-        id=4,
-        title="The Rern of the King",
-        author="J.R.R. Tolken",
-        publication_year=1955,
-        genre=Genre.FANTASY,
-    )
 }
 
 
