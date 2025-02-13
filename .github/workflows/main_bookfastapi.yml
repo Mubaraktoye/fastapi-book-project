@@ -30,7 +30,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         push: true
-        tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_7ac04330082641f4997c080fbbf0337a }}/mubaraktoye/fastapi-app:${{ github.sha }}
+        tags: index.docker.io/${{ secrets.DOCKER_USERNAME}}/mubaraktoye/fastapi-app:${{ github.sha }}
         file: ./Dockerfile
 
   deploy:
