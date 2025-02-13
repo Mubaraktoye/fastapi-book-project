@@ -36,7 +36,7 @@ db.books = {
         author="J.R.R. Tolken",
         publication_year=1955,
         genre=Genre.FANTASY,
-    ),
+    )
 }
 
 
