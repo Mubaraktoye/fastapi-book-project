@@ -57,3 +57,9 @@ jobs:
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_241f2caf30f544699a40421f8223a5f2 }}
         images: mubaraktoye/fastapi-app:${{ github.sha }}
+
+    - name: Restart Azure Web App
+      run: |
+        az webapp restart --name bookfastapi --resource-group DefaultResourceGroup-CUS
+      env:
+        AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
